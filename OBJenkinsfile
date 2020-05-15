@@ -2,8 +2,9 @@
 
 node {
 
+withEnv([dockerHome = tool 'CICDdocker', mavenHome = tool 'maven', PATH = "$dockerHome/bin:$mavenHome/bin:$PATH" ) {         
 	deliveryPipeline('') {
-        scmProject = 'DevOpsAmol'
+	scmProject = 'DevOpsAmol'
         scmRepository = 'Demo'
         pomFilePath = 'pom.xml'
         buildCommand = 'mvn clean package'
@@ -14,5 +15,6 @@ node {
 	//                  reportName: 'JBehave INT tests report'
 	//  ]
 
+		}
 	}
 }
