@@ -1,0 +1,18 @@
+@Library('jenkins-pipeline-library@master') _
+
+node {
+
+	deliveryPipeline('') {
+        scmProject = 'DevOpsAmol'
+        scmRepository = 'Demo'
+        pomFilePath = 'pom.xml'
+        buildCommand = 'mvn clean package'
+        
+    //publishTestReports = [
+	//				    reportDir: 'target/jbehave/view',
+	//					reportFiles: 'index.html',
+	//                  reportName: 'JBehave INT tests report'
+	//  ]
+
+	}
+}
