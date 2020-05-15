@@ -3,7 +3,7 @@
 node {
 	def dockerHome = tool 'CICDdocker'
 	def mavenHome = tool 'maven'
-	dev PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+	def PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
 	deliveryPipeline('') {
 	scmProject = 'DevOpsAmol'
         scmRepository = 'Demo'
