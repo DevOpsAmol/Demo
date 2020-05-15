@@ -1,9 +1,9 @@
 @Library( 'jenkins-pipeline-library' ) _
 
 node {
-	def env.dockerHome = tool 'CICDdocker'
-	def env.mavenHome = tool 'maven'
-	dev env.PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+	def dockerHome = tool 'CICDdocker'
+	def mavenHome = tool 'maven'
+	dev PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
 	deliveryPipeline('') {
 	scmProject = 'DevOpsAmol'
         scmRepository = 'Demo'
