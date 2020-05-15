@@ -2,6 +2,13 @@
 
 node {
 
+	environment {
+		dockerHome = tool 'CICDdocker'
+		mavenHome = tool 'maven'
+		sonarHome = tool 'DevOpsSonar'
+		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+	}
+
 	deliveryPipeline('') {
         scmProject = 'DevOpsAmol'
         scmRepository = 'Demo'
