@@ -2,7 +2,7 @@
 
 node {
 
-withEnv([dockerHome = tool 'CICDdocker', mavenHome = tool 'maven', PATH = "$dockerHome/bin:$mavenHome/bin:$PATH" ) {         
+withEnv([dockerHome = tool 'CICDdocker', mavenHome = tool 'maven', PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"]) {         
 	deliveryPipeline('') {
 	scmProject = 'DevOpsAmol'
         scmRepository = 'Demo'
