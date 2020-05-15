@@ -1,8 +1,9 @@
 @Library( 'jenkins-pipeline-library' ) _
 
 node {
-
-withEnv([dockerHome = tool 'CICDdocker', mavenHome = tool 'maven', PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"]) {         
+	def env.dockerHome = tool 'CICDdocker'
+	def env.mavenHome = tool 'maven'
+	dev env.PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
 	deliveryPipeline('') {
 	scmProject = 'DevOpsAmol'
         scmRepository = 'Demo'
@@ -15,6 +16,6 @@ withEnv([dockerHome = tool 'CICDdocker', mavenHome = tool 'maven', PATH = "$dock
 	//                  reportName: 'JBehave INT tests report'
 	//  ]
 
-		}
+		
 	}
 }
