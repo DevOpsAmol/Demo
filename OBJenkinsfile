@@ -9,6 +9,7 @@ node {
         scmRepository = 'Demo'
         pomFilePath = 'pom.xml'
         buildCommand = 'mvn clean package'
+	sonarCommand = 'mvn sonar:sonar'
         
     //publishTestReports = [
 	//				    reportDir: 'target/jbehave/view',
