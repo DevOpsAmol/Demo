@@ -28,6 +28,12 @@ pipeline {
 			}	
 		}
 		
+		stage('Sonar'){
+			steps {
+				sh 'mvn clean verify sonar:sonar'
+			}
+		}
+		
 		stage('Integration'){
 			steps {
 				sh 'mvn failsafe:integration-test failsafe:verify'
