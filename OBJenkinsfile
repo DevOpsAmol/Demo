@@ -8,7 +8,7 @@ node {
 	scmProject = 'DevOpsAmol'
         scmRepository = 'Demo'
         pomFilePath = 'pom.xml'
-        buildCommand = 'mvn package -DskipTests'
+        buildCommand = 'mvn clean compile'
 	sonarCommand = 'mvn sonar:sonar'
         
     //publishTestReports = [
