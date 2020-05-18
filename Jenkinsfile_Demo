@@ -46,11 +46,7 @@ pipeline {
 			}
 		}
 		
-		stage('publish reports'){
-			steps {
-				perfReport filterRegex: '', sourceDataFiles: 'target/surefire-reports/'
-			}
-		}
+		
 	}
 	post {
 	always {
