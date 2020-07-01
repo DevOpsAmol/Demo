@@ -1,9 +1,10 @@
 pipeline {
 	agent any
 	environment {
-		dockerHome = tool 'CICDdocker'
+		//dockerHome = tool 'CICDdocker'
 		mavenHome = tool 'maven'
-		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+		//PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+		PATH = "$mavenHome/bin:$PATH"
 	}
 	stages {
 		stage('variables'){
